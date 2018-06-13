@@ -10,25 +10,3 @@ ul{
   body{
         background-color: $grey;
   }
-  
-  .main_container{ @include flex-props(column);
-      
-      .page_header{
-            @include size($height, 100vw);
-            background-color: $blue;
-            position: fixed;
-            z-index: 1;
-      }
-      
-      .content_container{
-            position: relative;
-            top: 50px;
-            @include flex-props(row);
-            margin-top: 10px;
-      }
-      
-      .sidebar{
-            @include flex-props(column);
-            @include size(200vh, 25%);
-      }
-} 

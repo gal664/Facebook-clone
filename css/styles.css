@@ -1,3 +1,35 @@
+/* line 1, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_header.scss */
+.main_container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 3, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_header.scss */
+.main_container .page_header {
+  height: 50px;
+  width: 100vw;
+  background-color: #3b5998;
+  position: fixed;
+  z-index: 1;
+}
+
+/* line 10, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_header.scss */
+.main_container .content_container {
+  position: relative;
+  top: 5vh;
+  display: flex;
+  flex-direction: row;
+  margin-top: 1vh;
+}
+
+/* line 17, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_header.scss */
+.main_container .sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 200vh;
+  width: 25vw;
+}
+
 /* line 1, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_main.scss */
 ul {
   margin: 0;
@@ -13,38 +45,6 @@ ul {
 /* line 10, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_main.scss */
 body {
   background-color: #dfe3ee;
-}
-
-/* line 14, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_main.scss */
-.main_container {
-  display: flex;
-  flex-direction: column;
-}
-
-/* line 16, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_main.scss */
-.main_container .page_header {
-  height: 50px;
-  width: 100vw;
-  background-color: #3b5998;
-  position: fixed;
-  z-index: 1;
-}
-
-/* line 23, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_main.scss */
-.main_container .content_container {
-  position: relative;
-  top: 50px;
-  display: flex;
-  flex-direction: row;
-  margin-top: 10px;
-}
-
-/* line 30, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_main.scss */
-.main_container .sidebar {
-  display: flex;
-  flex-direction: column;
-  height: 200vh;
-  width: 25%;
 }
 
 /* line 1, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */

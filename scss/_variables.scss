@@ -5,7 +5,8 @@ $grey:  #dfe3ee;
 $almostWhite:  #f7f7f7;     
 $white:  #ffffff;
 //sizes
-$height: 5%;
+$height: 5vh;
+$width: 25vw;
 
 @mixin flex-props($dir){
       display: flex;

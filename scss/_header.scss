@@ -1,8 +1,7 @@
-  
-  .main_container{ @include flex-props(column);
+.main_container{ @include flex-props(column);
       
       .page_header{
-            @include size(50px, 100vw);
+            @include size(50px, $width * 4);
             background-color: $blue;
             position: fixed;
             z-index: 1;
@@ -10,13 +9,13 @@
       
       .content_container{
             position: relative;
-            top: 50px;
+            top: $height;
             @include flex-props(row);
-            margin-top: 10px;
+            margin-top: $height * 0.2;
       }
       
       .sidebar{
             @include flex-props(column);
-            @include size(200vh, 25%);
+            @include size(200vh /*need to change after everything works*/, $width);
       }
-}
+} 
