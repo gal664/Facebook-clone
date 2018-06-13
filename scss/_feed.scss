@@ -1,0 +1,61 @@
+.main_feed{
+      @include flex-props (column);
+      @include size (200vh, 50%);
+      padding: 0px 10px 0px 10px;
+      position: relative;
+      left: 25%;
+
+      .status_update{
+            @include size (170px, 100%);
+            @include flex-props (column);
+            background-color: $white;
+            
+            .status_update__header{
+                  @include flex-props (row);
+                  justify-content: flex-start;
+                  background-color: $grey;
+                  height: 20%;
+                  
+                  .header__menuItem{
+                        margin: 10px;
+                  }
+            }
+            
+            .status_update__content{
+                  @include flex-props (row);
+                  height: 60%;
+                  align-items: center;
+                  
+                  .profile_pic{
+                        @include size (50px, 50px);
+                        border-radius: 50%;
+                        background-color: red;
+                        margin: 20px;
+                  }
+                  
+                  .status_update__input{
+                        border: none;
+                        @include size (calc(100% - 70px), 100%);
+                        // width: calc(100% - 70px);
+                  }
+            }
+      
+            .status_update__toolbox{
+                  @include flex-props (row);
+                  justify-content: flex-start;
+                  background-color: $almostWhite;
+                  height: 25%;
+            }
+}
+      
+      .main_feed__feed{
+            @include flex-props (column);
+
+            
+            .feed-item{
+                  @include size (400px, 100%);
+                  background-color: $white;
+                  margin-top: 20px;
+            }
+      }
+}

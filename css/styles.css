@@ -1,0 +1,171 @@
+/* line 1, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_main.scss */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* line 6, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_main.scss */
+*:focus {
+  outline: none;
+}
+
+/* line 10, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_main.scss */
+body {
+  background-color: #dfe3ee;
+}
+
+/* line 14, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_main.scss */
+.main_container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 16, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_main.scss */
+.main_container .page_header {
+  height: 50px;
+  width: 100vw;
+  background-color: #3b5998;
+  position: fixed;
+  z-index: 1;
+}
+
+/* line 23, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_main.scss */
+.main_container .content_container {
+  position: relative;
+  top: 50px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+/* line 30, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_main.scss */
+.main_container .sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 200vh;
+  width: 25%;
+}
+
+/* line 1, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
+.main_feed {
+  display: flex;
+  flex-direction: column;
+  height: 200vh;
+  width: 50%;
+  padding: 0px 10px 0px 10px;
+  position: relative;
+  left: 25%;
+}
+
+/* line 8, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
+.main_feed .status_update {
+  height: 170px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+/* line 13, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
+.main_feed .status_update .status_update__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: #dfe3ee;
+  height: 20%;
+}
+
+/* line 19, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
+.main_feed .status_update .status_update__header .header__menuItem {
+  margin: 10px;
+}
+
+/* line 24, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
+.main_feed .status_update .status_update__content {
+  display: flex;
+  flex-direction: row;
+  height: 60%;
+  align-items: center;
+}
+
+/* line 29, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
+.main_feed .status_update .status_update__content .profile_pic {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: red;
+  margin: 20px;
+}
+
+/* line 36, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
+.main_feed .status_update .status_update__content .status_update__input {
+  border: none;
+  height: calc(100% - 70px);
+  width: 100%;
+}
+
+/* line 43, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
+.main_feed .status_update .status_update__toolbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: #f7f7f7;
+  height: 25%;
+}
+
+/* line 51, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
+.main_feed .main_feed__feed {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 55, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
+.main_feed .main_feed__feed .feed-item {
+  height: 400px;
+  width: 100%;
+  background-color: #ffffff;
+  margin-top: 20px;
+}
+
+/* line 1, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_left.scss */
+.left_sidebar {
+  height: 100vh;
+  position: fixed;
+  padding-left: 50px;
+}
+
+/* line 6, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_left.scss */
+.left_sidebar .left_sidebar__profile_link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* line 11, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_left.scss */
+.left_sidebar .profile_link__profile_pic {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: red;
+  margin: 5px;
+}
+
+/* line 18, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_left.scss */
+.left_sidebar .shortcuts_menu__menu_item {
+  padding: 5px;
+  padding-left: 15px;
+}
+
+/* line 23, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_left.scss */
+.left_sidebar .shortcuts_menu__menu_header {
+  font-weight: bold;
+}
+
+/* line 1, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_right.scss */
+.right_sidebar {
+  position: relative;
+  left: 25%;
+}
+
+/*# sourceMappingURL=../css/styles.map */

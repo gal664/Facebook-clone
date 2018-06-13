@@ -1,0 +1,27 @@
+.left_sidebar{
+      height: 100vh;
+      position: fixed;
+      padding-left: 50px;
+      
+      .left_sidebar__profile_link{
+            @include flex-props (row);
+            align-items: center;
+      }
+            
+      .profile_link__profile_pic{
+            @include size (20px, 20px);
+            border-radius: 50%;
+            background-color: red;
+            margin: 5px;
+      }
+      
+      .shortcuts_menu__menu_item{
+            padding: 5px;
+            padding-left: 15px;
+      }
+      
+      .shortcuts_menu__menu_header{
+            font-weight: bold;
+      }
+      
+}

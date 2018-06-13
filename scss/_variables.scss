@@ -1,0 +1,23 @@
+// colors
+$blue: #3b5998;  
+$lightBlue:  #8b9dc3; 
+$grey:  #dfe3ee; 
+$almostWhite:  #f7f7f7;     
+$white:  #ffffff;
+//sizes
+$height: 5%;
+
+@mixin flex-props($dir){
+      display: flex;
+      flex-direction: $dir;
+}
+
+@mixin size($h, $w){
+      height: $h;
+      width: $w;
+}
+
+@mixin order($m, $p){
+      margin: $m;
+      padding: $p;
+}
