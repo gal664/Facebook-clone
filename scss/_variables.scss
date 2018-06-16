@@ -1,12 +1,12 @@
 // colors
-$blue: #3b5998;  
+$blue: #4267b2;
+$darkblue: #29487d;
 $lightBlue:  #8b9dc3; 
 $grey:  #dfe3ee; 
 $almostWhite:  #f7f7f7;     
 $white:  #ffffff;
 //sizes
-$height: 5vh;
-$width: 25vw;
+$topH: 42px;
 
 @mixin flex-props($dir){
       display: flex;

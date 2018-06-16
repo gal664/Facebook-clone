@@ -9,4 +9,41 @@ ul{
   
   body{
         background-color: $grey;
+        @include flex-props(column);
+        align-items: center;
+
+        .page_header{
+              @include size($topH, 100%);
+              background-color: $blue;
+              border-bottom: 1px solid $darkblue;
+              position: fixed;
+              z-index: 1;
+        }
+        .main_container{
+            @include flex-props(column);
+            width: 80%;
+            align-items: center;
+            
+            .content_container{
+                  @include size(100%, 100%);
+                  position: relative;
+                  top: $topH;
+                  @include flex-props(row);
+                  justify-content: space-around;
+                  margin-top: 10px;
+                  background: $grey;
+            }
+            
+            .sidebar{
+                  @include flex-props(column);
+                  @include size(100%, 30%);
+            }
+            .main_feed{
+                  @include flex-props (column);
+                  // @include size (100%, 50%);
+                  // min-height: 100%;
+                  width: 50%;
+                  padding: 0px 10px 0px 10px;
+            }
+      } 
   }

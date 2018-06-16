@@ -1,77 +1,82 @@
 <!DOCTYPE html>
-      <head>
-            <title>Facebook Clone</title>
-            <link rel="stylesheet" href="css/reset.css">
-            <link rel="stylesheet" href="css/styles.css">
-            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-      </head>
-      <body>            
-            <div class="main_container">
-                  <div class="page_header"></div>
-                  <div class="content_container">
-                        <div class="left_sidebar sidebar">
-                              <div class="left_sidebar__profile_link">
-                                    <div class="profile_link__profile_pic"></div>
-                                    <span class="profile_link__username">Gal Yaniv</span>
-                              </div>
-                              <ul class="left_sidebar__shortcuts_menu">
-                                    <li class="shortcuts_menu__menu_item">News Feed</li>
-                                    <li class="shortcuts_menu__menu_item">Messenger</li>
-                                    <li class="shortcuts_menu__menu_item">Marketplace</li>
-                                    <li class="shortcuts_menu__menu_header">Shortcuts</li>
-                                    <li class="shortcuts_menu__menu_item">Page Name</li>
-                                    <li class="shortcuts_menu__menu_item">Page Name</li>
-                                    <li class="shortcuts_menu__menu_item">See More...</li>
-                                    <li class="shortcuts_menu__menu_header">Explore</li>
-                                    <li class="shortcuts_menu__menu_item">Events</li>
-                                    <li class="shortcuts_menu__menu_item">Groups</li>
-                                    <li class="shortcuts_menu__menu_item">Pages</li>
-                                    <li class="shortcuts_menu__menu_item">Saved</li>
-                                    <li class="shortcuts_menu__menu_item">See More...</li>
-                                    <li class="shortcuts_menu__menu_header">Create</li>
-                              </ul>
-                              <ul class="left_sidebar__bottom_menu">
-                                          <li class="shortcuts_menu__menu_item">Ad</li>
-                                          <li class="shortcuts_menu__menu_item">Page</li>
-                                          <li class="shortcuts_menu__menu_item">Group</li>
-                                          <li class="shortcuts_menu__menu_item">Event</li>
 
-                              </ul>
+<head>
+      <title>Facebook Clone</title>
+      <link rel="stylesheet" href="css/reset.css">
+      <link rel="stylesheet" href="css/styles.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"      
+            crossorigin="anonymous">
+            <script src="js/main.js"></script>
+</head>
+
+<body>
+      <div class="page_header"></div>
+      <div class="main_container">
+            <div class="content_container">
+                  <div class="left_sidebar sidebar">
+                        <div class="left_sidebar__profile_link">
+                              <div class="profile_link__profile_pic"></div>
+                              <!-- <span class="profile_link__username">Gal Yaniv</span> -->
                         </div>
-                        <div class="main_feed">
-                              <div class="status_update">
-                                    <div class="status_update__header">
-                                        <div class="header__menuItem">Make Post</div>  
-                                        <div class="header__menuItem">Photo/Video Album</div>  
-                                        <div class="header__menuItem">Live Video</div>  
-                                    </div>
-                                    <div class="status_update__content">
-                                          <div class="profile_pic"></div>
-                                          <input class="status_update__input" type="text" placeholder="What's on your mind?">
-                                    </div>
-                                    <div class="status_update__toolbox"></div>
-                                    
+                        <!-- <ul class="left_sidebar__shortcuts_menu">
+                              <li class="shortcuts_menu__menu_item">News Feed</li>
+                              <li class="shortcuts_menu__menu_item">Messenger</li>
+                              <li class="shortcuts_menu__menu_item">Marketplace</li>
+                              <li class="shortcuts_menu__menu_header">Shortcuts</li>
+                              <li class="shortcuts_menu__menu_item">Page Name</li>
+                              <li class="shortcuts_menu__menu_item">Page Name</li>
+                              <li class="shortcuts_menu__menu_item">See More...</li>
+                              <li class="shortcuts_menu__menu_header">Explore</li>
+                              <li class="shortcuts_menu__menu_item">Events</li>
+                              <li class="shortcuts_menu__menu_item">Groups</li>
+                              <li class="shortcuts_menu__menu_item">Pages</li>
+                              <li class="shortcuts_menu__menu_item">Saved</li>
+                              <li class="shortcuts_menu__menu_item">See More...</li>
+                              <li class="shortcuts_menu__menu_header">Create</li>
+                        </ul>
+                        <ul class="left_sidebar__bottom_menu">
+                              <li class="shortcuts_menu__menu_item">Ad</li>
+                              <li class="shortcuts_menu__menu_item">Page</li>
+                              <li class="shortcuts_menu__menu_item">Group</li>
+                              <li class="shortcuts_menu__menu_item">Event</li>
+
+                        </ul> -->
+                  </div>
+                  <div class="main_feed">
+                        <div class="status_update">
+                              <div class="status_update__header">
+                                    <div class="header__menuItem">Make Post</div>
+                                    <div class="header__menuItem">Photo/Video Album</div>
+                                    <div class="header__menuItem">Live Video</div>
                               </div>
-                              <div class="main_feed__feed">
-                                    <div class="feed-item"></div>
+                              <div class="status_update__content">
+                                    <div class="profile_pic"></div>
+                                    <input class="status_update__input" type="text" placeholder="What's on your mind?">
                               </div>
+                              <div class="status_update__toolbox"></div>
+
                         </div>
-                        <div class="right_sidebar sidebar">
-                              <div class="right_sidebar__sidebar_item right_sidebar__stories">
-                                    <div class="stories__stories_header">
-                                          <span class="stories_header__title">Stories</span>
-                                          <span class="stories_header__menu">...</span>
-                                    </div>
-                                    <div class="stories__stories_container">
-                                          <div class="profile_pic"></div>
-                                          <div class="stories_container__stories_content">
-                                                <span class="stories_content__title">Add to your story</span>
-                                                <span class="stories_content__description">Share a photo, video or write<br>something</span>
-                                          </div>
-                                    </div>
-                              </div>
+                        <div class="main_feed__feed">
                         </div>
                   </div>
+                  <div class="right_sidebar sidebar">
+                        <!-- <div class="right_sidebar__sidebar_item right_sidebar__stories">
+                              <div class="stories__stories_header">
+                                    <span class="stories_header__title">Stories</span>
+                                    <span class="stories_header__menu">...</span>
+                              </div>
+                              <div class="stories__stories_container">
+                                    <div class="profile_pic"></div>
+                                    <div class="stories_container__stories_content">
+                                          <span class="stories_content__title">Add to your story</span>
+                                          <span class="stories_content__description">Share a photo, video or write
+                                                <br>something</span>
+                                    </div>
+                              </div>
+                        </div> -->
+                  </div>
             </div>
-      </body>
+      </div>
+</body>
+
 </html>
