@@ -62,5 +62,27 @@
             .post_text{
                   padding: 10px;
             }
+            .edit_post{
+                  padding: 10px;
+                  border: none;
+            }
+      }
+      .post_actions{
+            @include flex-props(row);
+            padding: 10px;
+            .likes_container{
+                  .like_btn{
+                        padding-right: 5px;
+                        padding-left: 5px;
+                  }
+                  .likes_counter{
+                        padding-right: 5px;
+                        padding-left: 5px;
+
+                  }
+            }
+            .edit_post_button{
+
+            }
       }
 }

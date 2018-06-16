@@ -168,4 +168,29 @@ body .main_container .main_feed {
   padding: 10px;
 }
 
+/* line 65, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
+.main_feed__feed .feed-item .edit_post {
+  padding: 10px;
+  border: none;
+}
+
+/* line 70, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
+.main_feed__feed .post_actions {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+/* line 74, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
+.main_feed__feed .post_actions .likes_container .like_btn {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+/* line 78, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
+.main_feed__feed .post_actions .likes_container .likes_counter {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
 /*# sourceMappingURL=../css/styles.map */
