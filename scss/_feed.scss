@@ -38,8 +38,29 @@
 .main_feed__feed{
       @include flex-props (column);            
       .feed-item{
-            @include size (200px, 100%);
+            // @include size (200px, 100%);
+            width: 100%;
             background-color: $white;
             margin-top: 20px;
+            .feed-item__header{
+                  padding: 10px;
+                  @include flex-props(row);
+                  justify-content: space-between;
+                  padding-bottom: 10px;
+                  .header_left{
+                        @include flex-props (column);
+                        .user_name{
+                              font-weight: bold;
+                              font-size: 18px;
+                        }
+                        .timestamp{
+                              font-size: 12px;
+                              margin-top: 5px;
+                        }
+                  }
+            }
+            .post_text{
+                  padding: 10px;
+            }
       }
 }

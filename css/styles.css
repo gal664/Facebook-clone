@@ -131,10 +131,41 @@ body .main_container .main_feed {
 
 /* line 40, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
 .main_feed__feed .feed-item {
-  height: 200px;
   width: 100%;
   background-color: #ffffff;
   margin-top: 20px;
+}
+
+/* line 45, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
+.main_feed__feed .feed-item .feed-item__header {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+/* line 50, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
+.main_feed__feed .feed-item .feed-item__header .header_left {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 52, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
+.main_feed__feed .feed-item .feed-item__header .header_left .user_name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* line 56, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
+.main_feed__feed .feed-item .feed-item__header .header_left .timestamp {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* line 62, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
+.main_feed__feed .feed-item .post_text {
+  padding: 10px;
 }
 
 /*# sourceMappingURL=../css/styles.map */
