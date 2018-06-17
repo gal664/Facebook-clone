@@ -11,20 +11,12 @@ function init() {
             statusUpdate: document.querySelector(".status_update__input"),
             feed: document.querySelector(".main_feed__feed"),
       }
+
       elements.statusUpdate.addEventListener('keydown', (event) => {
             if (event.key === "Enter" && elements.statusUpdate.value !== "") {
-                  postText = elements.statusUpdate.value;
-                  createNewPost(postText);
-                  elements.statusUpdate.value = "";
+                  createNewPost(elements.statusUpdate.value);
             }
       });
-}
-function createElement(t, c, f, txt) {
-      let el = document.createElement(t);
-      el.className = c;
-      f.appendChild(el);
-      el.innerText = txt;
-      return el;
 }
 //try and turn this into a class
 function createNewPost(postText) {
@@ -32,11 +24,12 @@ function createNewPost(postText) {
       let newPost = document.createElement("div");
       newPost.className = "feed-item";
       elements.feed.insertBefore(newPost, elements.feed.firstChild);
-
+      
       let postHeader = createElement("div", "feed-item__header", newPost, "");
       let headerLeft = createElement("div", "header_left", postHeader, "")
-      let user_name = createElement("span", "user_name", headerLeft, "Gal Yaniv");
-      let postTime = createElement("span", "timestamp", headerLeft, new Date().toLocaleTimeString());
+      let user_name = createElement("span", "user_name", headerLeft, "Gal Yaniv");// username is curently hard-coded
+      let postTime = createElement("span", "postTimestamp", headerLeft, new Date().toLocaleTimeString());
+      let editTime = createElement("span", "editTimestamp", headerLeft, "");
       let headerRight = createElement("div", "header_right", postHeader, "")
       let removePostBtn = createElement("button", "remove_post_btn", headerRight, "Remove Post");
       let post = createElement("div", "post_text", newPost, postText, "");
@@ -59,9 +52,11 @@ function createNewPost(postText) {
                         editPostBtn.disabled = false;
                         newPost.replaceChild(post, editPost);
                         post.innerText = newPostText;
+                        editTime.innerText = `Last Edited: ${new Date().toLocaleTimeString()}`                        
                   }
             })
       })
+
       let likesIndex = likesCounter.innerText;
       likeBtn.addEventListener('click', (event) => {
             console.log(userLikedPost);
@@ -73,12 +68,21 @@ function createNewPost(postText) {
                   break;
                   case true:
                   console.log("true");
-                        likesIndex--;
-                        userLikedPost = false;
-                        break;
+                  likesIndex--;
+                  userLikedPost = false;
+                  break;
             }
             console.log(likesIndex);
             likesCounter.innerText = likesIndex;
       })
+      elements.statusUpdate.value = "";
       return newPost;
+}
+
+function createElement(t, c, f, txt) {
+      let el = document.createElement(t);
+      el.className = c;
+      f.appendChild(el);
+      el.innerText = txt;
+      return el;
 }

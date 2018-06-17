@@ -5,20 +5,21 @@ ul {
   list-style-type: none;
 }
 
-/* line 6, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_main.scss */
+/* line 5, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_main.scss */
 *:focus {
   outline: none;
 }
 
-/* line 10, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_main.scss */
+/* line 8, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_main.scss */
 body {
   background-color: #dfe3ee;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
 }
 
-/* line 15, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_main.scss */
+/* line 13, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_main.scss */
 body .page_header {
   height: 42px;
   width: 100%;
@@ -28,7 +29,7 @@ body .page_header {
   z-index: 1;
 }
 
-/* line 22, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_main.scss */
+/* line 20, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_main.scss */
 body .main_container {
   display: flex;
   flex-direction: column;
@@ -36,7 +37,7 @@ body .main_container {
   align-items: center;
 }
 
-/* line 27, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_main.scss */
+/* line 25, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_main.scss */
 body .main_container .content_container {
   height: 100%;
   width: 100%;
@@ -49,7 +50,7 @@ body .main_container .content_container {
   background: #dfe3ee;
 }
 
-/* line 37, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_main.scss */
+/* line 35, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_main.scss */
 body .main_container .sidebar {
   display: flex;
   flex-direction: column;
@@ -57,7 +58,7 @@ body .main_container .sidebar {
   width: 30%;
 }
 
-/* line 41, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_main.scss */
+/* line 39, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_main.scss */
 body .main_container .main_feed {
   display: flex;
   flex-direction: column;
@@ -158,36 +159,42 @@ body .main_container .main_feed {
 }
 
 /* line 56, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
-.main_feed__feed .feed-item .feed-item__header .header_left .timestamp {
+.main_feed__feed .feed-item .feed-item__header .header_left .postTimestamp {
   font-size: 12px;
   margin-top: 5px;
 }
 
-/* line 62, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
+/* line 60, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
+.main_feed__feed .feed-item .feed-item__header .header_left .editTimestamp {
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+/* line 66, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
 .main_feed__feed .feed-item .post_text {
   padding: 10px;
 }
 
-/* line 65, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
+/* line 69, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
 .main_feed__feed .feed-item .edit_post {
   padding: 10px;
   border: none;
 }
 
-/* line 70, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
+/* line 74, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
 .main_feed__feed .post_actions {
   display: flex;
   flex-direction: row;
   padding: 10px;
 }
 
-/* line 74, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
+/* line 78, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
 .main_feed__feed .post_actions .likes_container .like_btn {
   padding-right: 5px;
   padding-left: 5px;
 }
 
-/* line 78, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
+/* line 82, C:/Users/Gal.Yaniv/netcraft/facebook clone/scss/_feed.scss */
 .main_feed__feed .post_actions .likes_container .likes_counter {
   padding-right: 5px;
   padding-left: 5px;

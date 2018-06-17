@@ -2,16 +2,14 @@ ul{
       @include order(0, 0);
       list-style-type: none;
   }
-  
   *:focus {
-        outline: none;
+      outline: none;
   }
-  
   body{
-        background-color: $grey;
-        @include flex-props(column);
-        align-items: center;
-
+      background-color: $grey;
+      @include flex-props(column);
+      align-items: center;
+      font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
         .page_header{
               @include size($topH, 100%);
               background-color: $blue;
