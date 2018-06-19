@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       init();
 });
 function init() {
+      let curUser = new User;
       elements = {
             header: document.querySelector(".page_header"),
             mainContainer: document.querySelector(".main_container"),
@@ -17,6 +18,15 @@ function init() {
                   createNewPost(elements.statusUpdate.value);
             }
       });
+}
+
+class User{
+      constructor(){
+            this.name = `Gal Yaniv`;
+      }
+      getUserName(){
+            return this.name;
+      }
 }
 //try and turn this into a class
 function createNewPost(postText) {
