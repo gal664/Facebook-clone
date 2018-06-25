@@ -92,6 +92,7 @@ let curUser = new User();
 document.addEventListener("DOMContentLoaded", function (event) { init() });
 function init() {
       elements = getElements();
+      createPostsFromServer()
       elements.statusUpdate.addEventListener('keydown', (event) => {
             if (event.key === "Enter" && elements.statusUpdate.value !== "") {
                   let newPost = new FeedItem();
@@ -125,3 +126,16 @@ function getElements() {
       }
       return elements;
 };
+function createPostsFromServer() {
+      fetch('http://127.0.0.1:3000')
+            .then((data) => {
+                  data.json()
+                        .then((res) => {
+                              console.log(res);
+                              for (post of res.posts) {
+                                    let newPost = new FeedItem(post);
+                                    newPost.createNewPost(elements.statusUpdate.value);
+                              }
+                        });
+            });
+}

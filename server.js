@@ -9,13 +9,35 @@ let app = http.createServer((req, res) => {
   let resObject = {
     posts: [
       {
-        message: "I ate apple today",
-        likes: 3
+        posterUserName: "Moshe Moshe",
+        timeStamp: "1:52:10 PM",
+        postText: "What's up everyone?",
+        postTextEdits: [],
+        likesCounter: 3,
+        timeEdited: "",
+        userLikedPost: false,
+        deleted: false
       },
       {
-        message: "I ate apple tommorow",
-        likes: 10
-      }
+        posterUserName: "Israel Israeli",
+        timeStamp: "12:42:30 AM",
+        postText: "That's a stupid name",
+        postTextEdits: [],
+        likesCounter: 109,
+        timeEdited: "",
+        userLikedPost: false,
+        deleted: false
+      },
+      {
+        posterUserName: "Gal Yaniv",
+        timeStamp: "10:00:10 AM",
+        postText: "It's exactly 10:00 AM!!!",
+        postTextEdits: [],
+        likesCounter: 0,
+        timeEdited: "",
+        userLikedPost: false,
+        deleted: false
+      },
     ]
   };
 
