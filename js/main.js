@@ -2,11 +2,13 @@ class User {
       constructor() {
             this.name = `Gal Yaniv`;
       }
-      getUserName() {
-            return this.name;
-      }
 };
-//make the event listeners work
+class Feed {
+      constructor() {
+            this.element = createElement("div", "main_feed__feed", document.querySelector(".main_feed"), "");
+            this.posts = [];
+      }
+}
 class FeedItem {
       constructor(postObject) {
             this.postElement = null;
@@ -14,18 +16,19 @@ class FeedItem {
                   posterUserName: curUser.name,
                   timeStamp: new Date().toLocaleTimeString(),
                   postText: elements.statusUpdate.value,
+                  postTextEdits: [],
                   likesCounter: 0,
                   timeEdited: "",
-                  userLikedPost: false
+                  userLikedPost: false,
+                  deleted: false,
             }
-
             this.postData = { ...this.defaultPostData, ...postObject };
-            console.log(this.postData);
+            elements.feed.posts.push(this.postData);
       }
       createNewPost() {
             this.postElement = document.createElement("div");
             this.postElement.className = "feed-item";
-            elements.feed.insertBefore(this.postElement, elements.feed.firstChild);
+            elements.feed.element.insertBefore(this.postElement, elements.feed.firstChild);
             let postHeader = createElement("div", "feed-item__header", this.postElement, "");
             let headerLeft = createElement("div", "header_left", postHeader, "")
             let user_name = createElement("span", "user_name", headerLeft, this.postData.posterUserName);
@@ -41,7 +44,8 @@ class FeedItem {
             let editPostBtn = createElement("button", "edit_post_button", postActions, "Edit");
             elements.statusUpdate.value = "";
             removePostBtn.addEventListener("click", (event) => {
-                  elements.feed.removeChild(this.postElement);
+                  elements.feed.element.removeChild(this.postElement);
+                  this.postData.deleted = true;
             })
             editPostBtn.addEventListener("click", (event) => {
                   editPostBtn.disabled = true;
@@ -58,6 +62,7 @@ class FeedItem {
                               post.innerText = newPostText;
                               editTime.innerText = `Last Edited: ${new Date().toLocaleTimeString()}`
                               this.postData.timeEdited = new Date().toLocaleTimeString()
+                              this.postData.postTextEdits.push({ value: newPostText, time: this.postData.timeEdited });
                         }
                   })
             })
@@ -83,14 +88,13 @@ class FeedItem {
 }
 
 let elements;
-let curUser = new User;
+let curUser = new User();
 document.addEventListener("DOMContentLoaded", function (event) { init() });
 function init() {
       elements = getElements();
-      console.log(elements);
       elements.statusUpdate.addEventListener('keydown', (event) => {
             if (event.key === "Enter" && elements.statusUpdate.value !== "") {
-                  let newPost = new FeedItem;
+                  let newPost = new FeedItem();
                   newPost.createNewPost(elements.statusUpdate.value);
             }
       });
@@ -117,7 +121,7 @@ function getElements() {
             leftSidebar: document.querySelector(".left_sidebar"),
             rightSidebar: document.querySelector(".right_sidebar"),
             statusUpdate: document.querySelector(".status_update__input"),
-            feed: document.querySelector(".main_feed__feed"),
+            feed: new Feed(),
       }
       return elements;
 };
