@@ -11,7 +11,7 @@ let app = http.createServer((req, res) => {
       {
         posterUserName: "Moshe Moshe",
         timeStamp: "1:52:10 PM",
-        postText: "What's up everyone?",
+        postText: "What's up everyone? 1",
         postTextEdits: [],
         likesCounter: 3,
         timeEdited: "",
@@ -21,7 +21,7 @@ let app = http.createServer((req, res) => {
       {
         posterUserName: "Israel Israeli",
         timeStamp: "12:42:30 AM",
-        postText: "That's a stupid name",
+        postText: "That's a stupid name 2",
         postTextEdits: [],
         likesCounter: 109,
         timeEdited: "",
@@ -31,7 +31,7 @@ let app = http.createServer((req, res) => {
       {
         posterUserName: "Gal Yaniv",
         timeStamp: "10:00:10 AM",
-        postText: "It's exactly 10:00 AM!!!",
+        postText: "It's exactly 10:00 AM!!! 3",
         postTextEdits: [],
         likesCounter: 0,
         timeEdited: "",

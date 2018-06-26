@@ -26,9 +26,7 @@ class FeedItem {
             elements.feed.posts.push(this.postData);
       }
       createNewPost() {
-            this.postElement = document.createElement("div");
-            this.postElement.className = "feed-item";
-            elements.feed.element.insertBefore(this.postElement, elements.feed.firstChild);
+            this.postElement = createElementFirst("div", "feed-item", elements.feed.element, "");
             let postHeader = createElement("div", "feed-item__header", this.postElement, "");
             let headerLeft = createElement("div", "header_left", postHeader, "")
             let user_name = createElement("span", "user_name", headerLeft, this.postData.posterUserName);
@@ -96,7 +94,7 @@ function init() {
       elements.statusUpdate.addEventListener('keydown', (event) => {
             if (event.key === "Enter" && elements.statusUpdate.value !== "") {
                   let newPost = new FeedItem();
-                  newPost.createNewPost(elements.statusUpdate.value);
+                  newPost.createNewPost();
             }
       });
 }
@@ -134,7 +132,8 @@ function createPostsFromServer() {
                               console.log(res);
                               for (post of res.posts) {
                                     let newPost = new FeedItem(post);
-                                    newPost.createNewPost(elements.statusUpdate.value);
+                                    newPost.createNewPost();
+                                    elements.feed.post.push(post)
                               }
                         });
             });
