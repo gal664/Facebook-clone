@@ -13,10 +13,11 @@ let app = http.createServer((req, res) => {
         timeStamp: "1:52:10 PM",
         postText: "What's up everyone? 1",
         postTextEdits: [],
-        likesCounter: 3,
+        likesCounter: 6,
         timeEdited: "",
         userLikedPost: false,
-        deleted: false
+        deleted: false,
+        comments: []
       },
       {
         posterUserName: "Israel Israeli",
@@ -26,7 +27,8 @@ let app = http.createServer((req, res) => {
         likesCounter: 109,
         timeEdited: "",
         userLikedPost: false,
-        deleted: false
+        deleted: false,
+        comments: []
       },
       {
         posterUserName: "Gal Yaniv",
@@ -36,7 +38,17 @@ let app = http.createServer((req, res) => {
         likesCounter: 0,
         timeEdited: "",
         userLikedPost: false,
-        deleted: false
+        deleted: false,
+        comments: [
+          {
+            CommentText: "I'm fine y'know",
+            commenterUserName: "Israel Israeli",
+            deleted: false,
+            likesCounter: 3,
+            timeStamp: "11:29:48 PM",
+            userLikedComment: true
+          }
+        ]
       },
     ]
   };

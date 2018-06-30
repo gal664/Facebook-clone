@@ -38,7 +38,6 @@
 .main_feed__feed{
       @include flex-props (column);            
       .feed-item{
-            // @include size (200px, 100%);
             width: 100%;
             background-color: $white;
             margin-top: 20px;
@@ -48,14 +47,23 @@
                   justify-content: space-between;
                   padding-bottom: 10px;
                   .header_left{
-                        @include flex-props (column);
-                        .user_name{
-                              font-weight: bold;
-                              font-size: 18px;
+                        @include flex-props (row);
+                        .user_profile_pic{
+                              @include size (40px, 40px);
+                              border-radius: 50%;
+                              background-color: red;
+                              margin-right: 10px;
                         }
-                        .postTimestamp{
-                              font-size: 12px;
-                              margin-top: 5px;
+                        .userName_container{
+                              @include flex-props (column);
+                              .user_name{
+                                    font-weight: bold;
+                                    font-size: 18px;
+                              }
+                              .postTimestamp{
+                                    font-size: 12px;
+                                    margin-top: 5px;
+                              }
                         }
                         .editTimestamp{
                               font-size: 10px;
@@ -73,16 +81,80 @@
       }
       .post_actions{
             @include flex-props(row);
+
+            // padding: 10px;
+            .like_btn, .edit_post_button{
+                  width: 50%;
+                  height: 30px;
+                  background-color: $almostWhite;
+                  border-top: 2px;
+                  border-bottom: 2px;
+                  border-style: solid;
+                  border-color: $grey;
+                  &:hover{
+                        cursor: pointer;
+                  }
+            }
+      }
+      .likes_container{
             padding: 10px;
-            .likes_container{
-                  .like_btn{
-                        padding-right: 5px;
-                        padding-left: 5px;
-                  }
-                  .likes_counter{
-                        padding-right: 5px;
-                        padding-left: 5px;
-                  }
+            .likes_counter{
+                  padding-right: 5px;
+                  padding-left: 5px;
+            }
+      }
+
+
+
+      .feed-item__comment{
+            @include flex-props(row);
+            width: 100%;
+            padding: 10px;
+            .user_profile_pic{
+                  @include size (30px, 30px);
+                  border-radius: 50%;
+                  background-color: red;
+                  margin-right: 10px;
+            }
+            .commment_commentContainer{
+                  @include flex-props(column);
+                  .commment_comment{
+                        // padding: 10px;
+                  } 
+                  .commment_commentActionsContainer{
+                        font-size: 12px;
+
+                        .like_btn, .remove_comment_btn,{
+                              margin-right: 5px;
+                              &:hover{
+                                    cursor: pointer;
+                              }
+                        }
+                        .postTimestamp{
+                              margin-right: 5px;
+                        }
+                  } 
+            } 
+            .likes_counter{
+                  
+            } 
+      }
+
+
+
+      .comments_container__comment_input_container{
+            @include flex-props(row);
+            padding: 10px;
+            padding-bottom: 20px;
+            .user_profile_pic{
+                  @include size (30px, 30px);
+                  border-radius: 50%;
+                  background-color: red;
+                  margin-right: 10px;
+            }
+            .comment_input{
+                  // width: 100%;
+                  border: none;
             }
       }
 }
